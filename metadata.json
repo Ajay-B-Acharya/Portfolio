@@ -1,0 +1,6 @@
+{
+  "name": "RPG Kingdom Portfolio",
+  "description": "A gamified medieval strategy game style portfolio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

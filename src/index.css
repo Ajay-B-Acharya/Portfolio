@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-cinzel: "Cinzel", serif;
+  --font-nunito: "Nunito", sans-serif;
+  --color-game-bg: #1e1e24;
+  --color-game-border: #3b3b45;
+  --color-game-border-light: #5a5a66;
+  --color-game-gold: #fbbf24;
+  --color-game-gold-dark: #b45309;
+}
+
+@layer utilities {
+  .game-panel {
+    @apply bg-game-bg border-4 border-game-border rounded-lg shadow-[0_4px_10px_rgba(0,0,0,0.5),inset_0_0_15px_rgba(0,0,0,0.8)] relative;
+  }
+  
+  .game-panel::before {
+    content: '';
+    @apply absolute inset-0 border-2 border-game-border-light rounded-[4px] pointer-events-none;
+  }
+
+  .game-button {
+    @apply bg-gradient-to-b from-gray-700 to-gray-800 border-2 border-gray-600 rounded text-gray-200 shadow-md hover:from-gray-600 hover:to-gray-700 hover:text-white transition-all active:translate-y-[1px] active:shadow-inner;
+  }
+
+  .text-shadow-game {
+    text-shadow: 1px 1px 2px black, 0 0 1em rgba(0,0,0,0.8);
+  }
+
+  .animate-floating {
+    animation: floating 8s ease-in-out infinite;
+  }
+
+  .animate-cloud-slow {
+    animation: move-cloud 45s linear infinite;
+  }
+  
+  .animate-cloud-medium {
+    animation: move-cloud 35s linear infinite;
+  }
+  
+  .animate-cloud-fast {
+    animation: move-cloud 25s linear infinite;
+  }
+
+  .animate-water-flow-1 {
+    animation: water-flow-1 20s linear infinite;
+  }
+  
+  .animate-water-flow-2 {
+    animation: water-flow-2 25s linear infinite reverse;
+  }
+  
+  .animate-subtle-pulse {
+    animation: subtle-pulse 2s ease-in-out infinite;
+  }
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0px) scale(1.02); }
+  50% { transform: translateY(-20px) scale(1.02); }
+}
+
+@keyframes move-cloud {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(500vw); }
+}
+
+@keyframes water-flow-1 {
+  0% { background-position: 0px 0px; }
+  100% { background-position: 300px 300px; }
+}
+
+@keyframes water-flow-2 {
+  0% { background-position: 0px 0px; }
+  100% { background-position: 400px 400px; }
+}
+
+@keyframes subtle-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+
