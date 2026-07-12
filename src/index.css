@@ -33,6 +33,14 @@
     animation: floating 8s ease-in-out infinite;
   }
 
+  .scroll-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scroll-hide::-webkit-scrollbar {
+    display: none;
+  }
+
   .animate-cloud-slow {
     animation: move-cloud 45s linear infinite;
   }
@@ -85,5 +93,50 @@
 
 @keyframes shimmer {
   100% { transform: translateX(100%); }
+}
+
+/* ── Royal Letter animations ─────────────────────────────── */
+
+/* Wax seal inner glow pulse */
+@keyframes wax-glow {
+  0%, 100% { box-shadow: 0 4px 16px rgba(0,0,0,0.6), 0 0 0 0 rgba(192,57,43,0); }
+  50%       { box-shadow: 0 4px 16px rgba(0,0,0,0.6), 0 0 18px 6px rgba(192,57,43,0.5); }
+}
+
+.wax-seal-glow {
+  animation: wax-glow 1.8s ease-in-out infinite;
+}
+
+/* Parchment horizontal scan-line shimmer on entry */
+@keyframes parchment-reveal {
+  0%   { clip-path: inset(0 0 100% 0); opacity: 0; }
+  10%  { opacity: 1; }
+  100% { clip-path: inset(0 0 0% 0);   opacity: 1; }
+}
+
+/* Ribbon left curtain */
+@keyframes ribbon-left {
+  0%   { transform: scaleX(0); transform-origin: left; }
+  100% { transform: scaleX(1); transform-origin: left; }
+}
+
+/* Ribbon right curtain */
+@keyframes ribbon-right {
+  0%   { transform: scaleX(0); transform-origin: right; }
+  100% { transform: scaleX(1); transform-origin: right; }
+}
+
+/* Map marker click pulse ring */
+@keyframes marker-send {
+  0%   { transform: scale(0.85) translate(-50%, -100%); }
+  40%  { transform: scale(1.18) translate(-50%, -100%); }
+  70%  { transform: scale(0.95) translate(-50%, -100%); }
+  100% { transform: scale(1.10) translate(-50%, -100%); }
+}
+
+/* Dust particle drift */
+@keyframes dust-drift {
+  0%   { transform: translate(0, 0) scale(1); opacity: 0.8; }
+  100% { transform: translate(var(--dx), var(--dy)) scale(0); opacity: 0; }
 }
 

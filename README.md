@@ -1,20 +1,28 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# RPG Kingdom Portfolio
 
-# Run and deploy your AI Studio app
+An interactive medieval-themed portfolio website built with React, TypeScript, and Vite. Featuring an explorable map interface with ambient sound effects and interactive modals for showcasing skills, projects, and contact information.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/94d9d098-a6b9-4ac4-9bd0-4800e4defcef
+- 🎮 Interactive map-based interface with kingdom theme
+- 🎨 Deep blue and gold color scheme
+- 📱 Responsive modals for About, Skills, and Contact sections
+- 🔊 Ambient seashore and bird sound effects
+- 📥 Downloadable resume functionality
+- 🔗 Social profile links (GitHub, LinkedIn, Email)
 
-## Run Locally
+## Getting Started
 
-**Prerequisites:**  Node.js
-
+**Prerequisites:** Node.js
 
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+   ```bash
+   npm install
+   ```
+
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+3. Open your browser and navigate to `http://localhost:3000`
