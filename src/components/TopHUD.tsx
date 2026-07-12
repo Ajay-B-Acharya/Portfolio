@@ -81,8 +81,8 @@ const TopHUD = () => {
               <div>
                 <h3 className="font-nunito font-black text-sm text-yellow-500 tracking-wider mb-3 text-center">JOURNEY HIGHLIGHTS</h3>
                 <ul className="flex flex-col gap-2">
-                  <HighlightItem text="Built 25+ Projects" />
-                  <HighlightItem text="Participated in 15+ Hackathons" />
+                  <HighlightItem text="Built 6 Projects" />
+                  <HighlightItem text="Participated in 2 Hackathons" />
                   <HighlightItem text="Skilled in 10+ Technologies" />
                   <HighlightItem text="Always learning, always building!" />
                 </ul>
