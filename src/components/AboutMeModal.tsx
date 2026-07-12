@@ -34,7 +34,7 @@ const AboutMeModal: React.FC<AboutMeModalProps> = ({ isOpen, onClose }) => {
         <div className="flex-1 text-[15px] leading-relaxed font-serif text-[#4a3525]">
           <p className="mb-3 font-bold text-2xl text-[#8b5a2b]">Hey there! 👋</p>
           <p className="font-medium">
-            I'm <span className="font-bold text-[#5c2e0e] text-lg">Ajay Acharya</span>, 
+            I'm <span className="font-bold text-[#5c2e0e] text-lg">Ajay</span>, 
             an Electronics & Communication Engineering student, developer, 
             problem solver, and life-long learner.
           </p>
