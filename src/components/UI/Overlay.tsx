@@ -22,12 +22,13 @@ export function Overlay() {
         <p className="eyebrow">{portfolio.projectName}</p>
         <h1>{portfolio.name}</h1>
         <p className="role">{portfolio.role}</p>
+        <p className="tagline">{portfolio.tagline}</p>
       </motion.section>
       <div className="utilities">
         <ResumeButton />
         <ContactButton />
       </div>
-      <p className="scene-note">A spatial portfolio in progress</p>
+      <p className="scene-note">A spatial portfolio experience</p>
     </div>
   );
 }
