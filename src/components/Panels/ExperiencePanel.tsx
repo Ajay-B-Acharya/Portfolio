@@ -5,12 +5,12 @@ export function ExperiencePanel() {
     <div>
       <h3
         style={{
-          margin: "0 0 0.85rem",
-          fontSize: "0.82rem",
+          margin: "0 0 1rem",
+          fontSize: "0.95rem",
           fontWeight: 600,
           letterSpacing: "0.15em",
           textTransform: "uppercase",
-          color: "#a8b4ba",
+          color: "#D9DEE7",
         }}
       >
         {portfolio.experience.title}
@@ -18,7 +18,7 @@ export function ExperiencePanel() {
       <ul
         style={{
           margin: 0,
-          padding: "0 0 0 1.1rem",
+          padding: "0 0 0 1.2rem",
           listStyle: "none",
         }}
       >
@@ -27,18 +27,18 @@ export function ExperiencePanel() {
             key={i}
             style={{
               position: "relative",
-              marginTop: i === 0 ? 0 : "0.5rem",
-              paddingLeft: "0.15rem",
-              fontSize: "0.72rem",
-              color: "#bcc6cb",
-              lineHeight: "1.5",
+              marginTop: i === 0 ? 0 : "0.65rem",
+              paddingLeft: "0.2rem",
+              fontSize: "0.82rem",
+              color: "#F2F4F7",
+              lineHeight: "1.6",
             }}
           >
             <span
               style={{
                 position: "absolute",
-                left: "-1.1rem",
-                color: "#6d7a81",
+                left: "-1.2rem",
+                color: "#A5ACB7",
               }}
             >
               •

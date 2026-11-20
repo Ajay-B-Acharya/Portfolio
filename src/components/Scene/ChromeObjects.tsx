@@ -1,13 +1,40 @@
 export function ChromeObjects() {
   return (
     <group>
-      <mesh position={[-2.65, 1.32, -1.7]} rotation={[0.55, 0.25, 0.15]}>
-        <torusGeometry args={[0.33, 0.035, 8, 32]} />
-        <meshStandardMaterial color="#b8bec2" metalness={1} roughness={0.2} />
+      {/* Top left torus */}
+      <mesh position={[-2.2, 1.5, -1.9]} rotation={[0.6, 0.3, 0.2]}>
+        <torusGeometry args={[0.35, 0.04, 10, 36]} />
+        <meshStandardMaterial 
+          color="#D9DEE7" 
+          metalness={0.95} 
+          roughness={0.15}
+          emissive="#69717F"
+          emissiveIntensity={0.08}
+        />
       </mesh>
-      <mesh position={[2.45, -1.28, -1.8]} rotation={[0.2, 0.6, -0.25]}>
-        <torusGeometry args={[0.22, 0.028, 8, 24]} />
-        <meshStandardMaterial color="#8d979b" metalness={1} roughness={0.25} />
+      
+      {/* Bottom right torus */}
+      <mesh position={[2.1, -1.4, -2.1]} rotation={[0.3, 0.7, -0.3]}>
+        <torusGeometry args={[0.26, 0.032, 8, 32]} />
+        <meshStandardMaterial 
+          color="#A5ACB7" 
+          metalness={0.92} 
+          roughness={0.18}
+          emissive="#69717F"
+          emissiveIntensity={0.06}
+        />
+      </mesh>
+      
+      {/* Small accent sphere top right */}
+      <mesh position={[1.8, 1.8, -2.3]}>
+        <sphereGeometry args={[0.08, 16, 16]} />
+        <meshStandardMaterial 
+          color="#F2F4F7" 
+          metalness={1} 
+          roughness={0.1}
+          emissive="#D9DEE7"
+          emissiveIntensity={0.1}
+        />
       </mesh>
     </group>
   );

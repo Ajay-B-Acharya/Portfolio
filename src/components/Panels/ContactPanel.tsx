@@ -5,31 +5,32 @@ export function ContactPanel() {
     <div>
       <h3
         style={{
-          margin: "0 0 0.85rem",
-          fontSize: "0.82rem",
+          margin: "0 0 1rem",
+          fontSize: "0.95rem",
           fontWeight: 600,
           letterSpacing: "0.15em",
           textTransform: "uppercase",
-          color: "#a8b4ba",
+          color: "#D9DEE7",
         }}
       >
         {portfolio.contact.title}
       </h3>
-      <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
         {portfolio.contact.links.map((link, i) => (
           <a
             key={i}
             href={link.url}
             style={{
-              color: "#c5ced2",
-              fontSize: "0.72rem",
+              color: "#F2F4F7",
+              fontSize: "0.8rem",
               textDecoration: "none",
-              padding: "0.35rem 0.65rem",
-              background: "rgba(255, 255, 255, 0.04)",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              borderRadius: "3px",
+              padding: "0.45rem 0.8rem",
+              background: "rgba(217, 222, 231, 0.06)",
+              border: "1px solid rgba(217, 222, 231, 0.15)",
+              borderRadius: "4px",
               transition: "all 0.2s",
               display: "inline-block",
+              fontWeight: 500,
             }}
           >
             {link.label}

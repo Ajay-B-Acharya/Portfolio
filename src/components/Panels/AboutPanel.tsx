@@ -5,12 +5,12 @@ export function AboutPanel() {
     <div>
       <h3
         style={{
-          margin: "0 0 0.85rem",
-          fontSize: "0.82rem",
+          margin: "0 0 1rem",
+          fontSize: "0.95rem",
           fontWeight: 600,
           letterSpacing: "0.15em",
           textTransform: "uppercase",
-          color: "#a8b4ba",
+          color: "#D9DEE7",
         }}
       >
         {portfolio.about.title}
@@ -19,10 +19,10 @@ export function AboutPanel() {
         <p
           key={i}
           style={{
-            margin: i === 0 ? 0 : "0.6rem 0 0",
-            color: "#bcc6cb",
-            fontSize: "0.72rem",
-            lineHeight: "1.55",
+            margin: i === 0 ? 0 : "0.75rem 0 0",
+            color: "#F2F4F7",
+            fontSize: "0.85rem",
+            lineHeight: "1.65",
           }}
         >
           {line}

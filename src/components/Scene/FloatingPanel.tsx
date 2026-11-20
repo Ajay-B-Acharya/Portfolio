@@ -42,29 +42,44 @@ export function FloatingPanel({
 
   return (
     <group ref={groupRef} position={position} rotation={rotation}>
-      {/* Panel geometry */}
+      {/* Panel geometry - improved visibility */}
       <mesh>
         <boxGeometry args={[width, height, depth, 2, 2, 1]} />
         <meshPhysicalMaterial
-          color="#1a1f22"
-          metalness={0.28}
-          roughness={0.15}
+          color="#171B23"
+          metalness={0.42}
+          roughness={0.12}
           transparent
-          opacity={0.65}
-          clearcoat={0.85}
-          clearcoatRoughness={0.08}
+          opacity={0.88}
+          clearcoat={0.95}
+          clearcoatRoughness={0.05}
+          envMapIntensity={1.2}
         />
       </mesh>
       
-      {/* Border frame */}
+      {/* Border frame - more visible */}
       <mesh>
-        <boxGeometry args={[width + 0.015, height + 0.015, depth - 0.005, 2, 2, 1]} />
+        <boxGeometry args={[width + 0.02, height + 0.02, depth - 0.01, 2, 2, 1]} />
         <meshStandardMaterial
-          color="#8a959c"
-          metalness={0.72}
-          roughness={0.18}
+          color="#69717F"
+          metalness={0.85}
+          roughness={0.12}
           transparent
-          opacity={0.35}
+          opacity={0.68}
+          emissive="#69717F"
+          emissiveIntensity={0.15}
+        />
+      </mesh>
+
+      {/* Inner highlight edge */}
+      <mesh>
+        <boxGeometry args={[width - 0.04, height - 0.04, depth + 0.005, 2, 2, 1]} />
+        <meshStandardMaterial
+          color="#D9DEE7"
+          metalness={0.92}
+          roughness={0.08}
+          transparent
+          opacity={0.12}
         />
       </mesh>
 
@@ -83,10 +98,10 @@ export function FloatingPanel({
           <div
             style={{
               width: "100%",
-              padding: "1.2rem 1.5rem",
-              color: "#d4dce0",
-              fontSize: "0.72rem",
-              lineHeight: "1.55",
+              padding: "1.6rem 2rem",
+              color: "#F2F4F7",
+              fontSize: "0.85rem",
+              lineHeight: "1.6",
             }}
           >
             {children}

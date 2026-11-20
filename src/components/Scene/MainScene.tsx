@@ -34,20 +34,22 @@ export function MainScene() {
         frameloop={reducedMotion ? "demand" : "always"}
         gl={{ antialias: true, alpha: false, powerPreference: "high-performance" }}
       >
-        <color attach="background" args={["#08090b"]} />
-        <ambientLight intensity={0.42} color="#9ca9b0" />
-        <directionalLight position={[3, 4, 5]} intensity={2.2} color="#f1f5f6" />
-        <pointLight position={[-3, -1, 2]} intensity={1.1} color="#798991" distance={7} />
+        <color attach="background" args={["#080A0E"]} />
+        <ambientLight intensity={0.55} color="#A5ACB7" />
+        <directionalLight position={[4, 5, 3]} intensity={2.8} color="#F2F4F7" castShadow={false} />
+        <directionalLight position={[-3, -2, 2]} intensity={1.2} color="#69717F" />
+        <pointLight position={[0, 0, 4]} intensity={0.8} color="#D9DEE7" distance={10} decay={2} />
+        <spotLight position={[0, 4, 2]} intensity={1.5} angle={0.8} penumbra={0.5} color="#F2F4F7" castShadow={false} />
 
         {/* Desktop: All 6 panels */}
         {showAllPanels && (
           <>
             {/* About Panel - Top Left */}
             <FloatingPanel
-              position={[-3.2, 2.2, -0.8]}
-              rotation={[0.05, 0.15, 0]}
-              width={2.8}
-              height={2.2}
+              position={[-2.6, 1.8, -0.6]}
+              rotation={[0.04, 0.12, 0]}
+              width={2.6}
+              height={2}
               animationPhase={0}
               animationSpeed={0.9}
             >
@@ -56,10 +58,10 @@ export function MainScene() {
 
             {/* Skills Panel - Top Center */}
             <FloatingPanel
-              position={[0, 2.8, -1.2]}
-              rotation={[0.08, 0, 0]}
-              width={3.2}
-              height={2.4}
+              position={[0, 2.2, -0.9]}
+              rotation={[0.06, 0, 0]}
+              width={3}
+              height={2.2}
               animationPhase={1.5}
               animationSpeed={1.1}
             >
@@ -68,10 +70,10 @@ export function MainScene() {
 
             {/* Projects Panel - Top Right */}
             <FloatingPanel
-              position={[3.2, 2.2, -0.5]}
-              rotation={[0.05, -0.15, 0]}
-              width={2.8}
-              height={2.2}
+              position={[2.6, 1.8, -0.5]}
+              rotation={[0.04, -0.12, 0]}
+              width={2.6}
+              height={2}
               animationPhase={3}
               animationSpeed={0.85}
             >
@@ -80,10 +82,10 @@ export function MainScene() {
 
             {/* Experience Panel - Bottom Left */}
             <FloatingPanel
-              position={[-3.2, -2.2, -0.6]}
-              rotation={[-0.05, 0.12, 0]}
-              width={2.8}
-              height={2}
+              position={[-2.6, -1.8, -0.7]}
+              rotation={[-0.04, 0.1, 0]}
+              width={2.6}
+              height={1.9}
               animationPhase={4.5}
               animationSpeed={0.95}
             >
@@ -92,10 +94,10 @@ export function MainScene() {
 
             {/* Achievements Panel - Bottom Right */}
             <FloatingPanel
-              position={[3.2, -2.2, -0.9]}
-              rotation={[-0.05, -0.12, 0]}
-              width={2.8}
-              height={2}
+              position={[2.6, -1.8, -0.8]}
+              rotation={[-0.04, -0.1, 0]}
+              width={2.6}
+              height={1.9}
               animationPhase={6}
               animationSpeed={1.05}
             >
@@ -104,10 +106,10 @@ export function MainScene() {
 
             {/* Contact Panel - Bottom Center */}
             <FloatingPanel
-              position={[0, -2.8, -1]}
-              rotation={[-0.08, 0, 0]}
-              width={2.6}
-              height={1.8}
+              position={[0, -2.4, -0.6]}
+              rotation={[-0.06, 0, 0]}
+              width={2.4}
+              height={1.7}
               animationPhase={7.5}
               animationSpeed={0.88}
             >
@@ -120,10 +122,10 @@ export function MainScene() {
         {showReducedPanels && (
           <>
             <FloatingPanel
-              position={[-2.4, 1.8, -0.6]}
-              rotation={[0.05, 0.12, 0]}
-              width={2.4}
-              height={2}
+              position={[-2.2, 1.6, -0.5]}
+              rotation={[0.04, 0.1, 0]}
+              width={2.3}
+              height={1.9}
               animationPhase={0}
               animationSpeed={0.9}
             >
@@ -131,10 +133,10 @@ export function MainScene() {
             </FloatingPanel>
 
             <FloatingPanel
-              position={[2.4, 1.8, -0.5]}
-              rotation={[0.05, -0.12, 0]}
-              width={2.6}
-              height={2.2}
+              position={[2.2, 1.6, -0.4]}
+              rotation={[0.04, -0.1, 0]}
+              width={2.5}
+              height={2.1}
               animationPhase={1.5}
               animationSpeed={1.1}
             >
@@ -142,10 +144,10 @@ export function MainScene() {
             </FloatingPanel>
 
             <FloatingPanel
-              position={[-2.4, -1.8, -0.7]}
-              rotation={[-0.05, 0.1, 0]}
-              width={2.4}
-              height={2}
+              position={[-2.2, -1.6, -0.6]}
+              rotation={[-0.04, 0.08, 0]}
+              width={2.3}
+              height={1.9}
               animationPhase={3}
               animationSpeed={0.95}
             >
@@ -153,10 +155,10 @@ export function MainScene() {
             </FloatingPanel>
 
             <FloatingPanel
-              position={[2.4, -1.8, -0.6]}
-              rotation={[-0.05, -0.1, 0]}
-              width={2.3}
-              height={1.8}
+              position={[2.2, -1.6, -0.5]}
+              rotation={[-0.04, -0.08, 0]}
+              width={2.2}
+              height={1.7}
               animationPhase={4.5}
               animationSpeed={0.88}
             >
@@ -169,10 +171,10 @@ export function MainScene() {
         {isMobile && (
           <>
             <FloatingPanel
-              position={[0, 2.2, -0.8]}
-              rotation={[0.05, 0, 0]}
-              width={2.6}
-              height={2}
+              position={[0, 2, -0.7]}
+              rotation={[0.03, 0, 0]}
+              width={2.5}
+              height={1.9}
               animationPhase={0}
               animationSpeed={0.85}
             >
@@ -180,10 +182,10 @@ export function MainScene() {
             </FloatingPanel>
 
             <FloatingPanel
-              position={[0, 0, -0.5]}
+              position={[0, 0, -0.4]}
               rotation={[0, 0, 0]}
-              width={2.8}
-              height={2.2}
+              width={2.7}
+              height={2.1}
               animationPhase={2}
               animationSpeed={0.9}
             >
@@ -191,10 +193,10 @@ export function MainScene() {
             </FloatingPanel>
 
             <FloatingPanel
-              position={[0, -2.2, -0.7]}
-              rotation={[-0.05, 0, 0]}
-              width={2.6}
-              height={2}
+              position={[0, -2, -0.6]}
+              rotation={[-0.03, 0, 0]}
+              width={2.5}
+              height={1.9}
               animationPhase={4}
               animationSpeed={0.88}
             >

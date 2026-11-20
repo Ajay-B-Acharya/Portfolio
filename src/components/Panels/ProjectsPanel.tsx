@@ -5,25 +5,25 @@ export function ProjectsPanel() {
     <div>
       <h3
         style={{
-          margin: "0 0 0.85rem",
-          fontSize: "0.82rem",
+          margin: "0 0 1rem",
+          fontSize: "0.95rem",
           fontWeight: 600,
           letterSpacing: "0.15em",
           textTransform: "uppercase",
-          color: "#a8b4ba",
+          color: "#D9DEE7",
         }}
       >
         {portfolio.projects.title}
       </h3>
-      <div style={{ display: "flex", flexDirection: "column", gap: "0.7rem" }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem" }}>
         {portfolio.projects.items.map((project, i) => (
           <div key={i}>
             <p
               style={{
-                margin: "0 0 0.2rem",
-                fontSize: "0.72rem",
+                margin: "0 0 0.3rem",
+                fontSize: "0.82rem",
                 fontWeight: 600,
-                color: "#d0d8dc",
+                color: "#F2F4F7",
               }}
             >
               {project.name}
@@ -31,9 +31,9 @@ export function ProjectsPanel() {
             <p
               style={{
                 margin: 0,
-                fontSize: "0.66rem",
-                color: "#9ca8ae",
-                lineHeight: "1.45",
+                fontSize: "0.75rem",
+                color: "#A5ACB7",
+                lineHeight: "1.55",
               }}
             >
               {project.description}
